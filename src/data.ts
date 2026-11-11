@@ -38,21 +38,22 @@ import type {
 // tab, and the preview card people see when you share your link.
 // --------------------------------------------------------------
 export const SITE: Site = {
-  name: 'Your Name',
-  headline: 'Computer Science student & aspiring software developer', // what you do, in a few words
+  name: 'Spencer Kelly',
+  headline: 'Computer Science student at Wilfrid Laurier University', // what you do, in a few words
   pitch:
-    'I build friendly, reliable web apps and love turning messy problems into simple tools. Currently looking for my next internship.', // 1 or 2 sentences
-  location: 'Waterloo, ON',
-  availability: 'Open to summer 2027 internships', // or "" to hide the badge
-  photo: 'photo.jpg', // a headshot in the public/ folder, or "" to hide it
+    "I've always wanted to understand how things work. I build full-stack web apps and tinker with self-hosting on my own Proxmox and k3s home lab.", // 1 or 2 sentences
+  location: 'Waterloo, Ontario',
+  availability: '', // or "" to hide the badge
+  photo: 'headshot.webp', // a headshot in the public/ folder, or "" to hide it
   resume: 'resume.pdf', // your resume as a PDF in public/ (powers the "Resume" button)
-  email: 'you@example.com', // used by the "Get in touch" and "Email me" buttons
+  email: '', // used by the "Get in touch" and "Email me" buttons
 
   // For search engines and link previews (LinkedIn, Slack, iMessage, ...)
-  url: '', // your live site address once it's online, e.g. "https://yourname.dev"
-  description: 'Portfolio of Your Name: projects, experience, and how to get in touch.',
+  url: 'https://spencerkelly.ca', // your live site address once it's online, e.g. "https://yourname.dev"
+  description:
+    'Spencer Kelly, Computer Science student at Wilfrid Laurier University. Full-stack developer with experience in React, TypeScript, Node.js, and systems programming. Explore projects, skills, and experience.',
   socialImage: 'og-image.png', // a 1200 x 630 picture in public/ shown in link previews
-  favicon: '👋', // the little icon in the browser tab: an emoji, or a file in public/ like "favicon.png"
+  favicon: 'favicon.svg', // the little icon in the browser tab: an emoji, or a file in public/ like "favicon.png"
 }
 
 // --------------------------------------------------------------
@@ -60,8 +61,8 @@ export const SITE: Site = {
 // Colours are hex codes. Pick one you like at https://coolors.co
 // --------------------------------------------------------------
 export const THEME: Theme = {
-  accent: '#E4572E', // buttons, links and highlights in light mode
-  accentDark: '#FF7A50', // the same colour, a bit brighter, for dark mode
+  accent: '#416179', // buttons, links and highlights in light mode
+  accentDark: '#8DB3D1', // the same colour, a bit brighter, for dark mode
   mode: 'system', // "system" follows the visitor's device, or force "light" / "dark"
   font: 'sans', // "sans", "serif", or "mono"
 }
@@ -73,9 +74,8 @@ export const THEME: Theme = {
 // "bluesky", "mail", or "website". Only keep what you want public.
 // --------------------------------------------------------------
 export const SOCIALS: SocialLink[] = [
-  { label: 'GitHub', url: 'https://github.com/your-username', icon: 'github' },
-  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/your-name', icon: 'linkedin' },
-  { label: 'Email', url: 'mailto:you@example.com', icon: 'mail' },
+  { label: 'GitHub', url: 'https://github.com/Flapjacck', icon: 'github' },
+  { label: 'LinkedIn', url: 'https://www.linkedin.com/in/spencergk/', icon: 'linkedin' },
 ]
 
 // --------------------------------------------------------------
@@ -89,22 +89,26 @@ export const SOCIALS: SocialLink[] = [
 // --------------------------------------------------------------
 export const ABOUT: About = {
   paragraphs: [
-    "I'm a third-year Computer Science student who likes building things people actually use. Most of my projects start with a small annoyance in my own life and end with a tool my friends ask to borrow.",
-    "Outside of class I lead workshops for my school's computing club, and I've spent the last two summers working on internal tools and data dashboards. I'm happiest on teams that ship often and talk to their users.",
+    "From tinkering with Minecraft Redstone to studying Computer Science at Wilfrid Laurier University, my path has always been driven by a desire to understand how things work. Growing up as my family's IT support taught me early on that technology is a powerful tool for helping others.",
+    "Right now I'm VP of Engineering at the Laurier Computing Society, where I lead engineering on LOCAH.ai, and I co-founded CS Digital to build websites for local businesses. At home I run a Proxmox home lab on an M900 with a k3s cluster, where I test and deploy my side projects.",
+    "I'm looking to translate this lifelong passion for problem-solving into a professional career where I can contribute meaningful technical solutions.",
   ],
   facts: [
-    { label: 'Based in', value: 'Waterloo, ON' },
-    { label: 'Studying', value: 'BSc Computer Science' },
-    { label: 'Focus', value: 'Web apps & data' },
-    { label: 'Fun fact', value: 'Solves a Rubik’s cube in under 20 s' },
+    { label: 'Based in', value: 'Waterloo, Ontario' },
+    { label: 'Studying', value: 'Computer Science, 4th year' },
+    { label: 'Home lab', value: 'Proxmox + k3s on an M900' },
+    { label: 'Currently into', value: 'Speedcubing' },
   ],
   education: [
     {
-      school: 'Your University',
-      degree: 'Bachelor of Science in Computer Science',
-      location: 'Waterloo, ON',
-      dates: '2024 to 2028',
-      details: ["Dean's List, 2025", 'Courses: Data Structures, Databases, Human-Computer Interaction'],
+      school: 'Wilfrid Laurier University',
+      degree: 'B.S. in Computer Science',
+      location: 'Waterloo, Ontario',
+      dates: '2023 to 2027',
+      details: [
+        'Coursework: Data Structures, OOP, Intro to Microprocessors, Algorithms, Operating Systems',
+        'Fall 2026: Cloud Computing',
+      ],
     },
   ],
 }
@@ -114,9 +118,22 @@ export const ABOUT: About = {
 // Group them however makes sense. Each skill becomes a small tag.
 // --------------------------------------------------------------
 export const SKILLS: SkillGroup[] = [
-  { group: 'Languages', skills: ['TypeScript', 'JavaScript', 'Java', 'SQL', 'HTML & CSS'] },
-  { group: 'Frameworks & tools', skills: ['React', 'Node.js', 'Vite', 'Git', 'PostgreSQL', 'Figma'] },
-  { group: 'Professional', skills: ['Public speaking', 'Project management', 'Technical writing', 'Mentoring'] },
+  {
+    group: 'Languages',
+    skills: ['Python', 'JavaScript', 'TypeScript', 'C', 'Assembly', 'Java', 'SQL', 'HTML5', 'CSS3', 'Markdown', 'Bash', 'VBA', 'Go'],
+  },
+  {
+    group: 'Frameworks & libraries',
+    skills: ['React', 'Next.js', 'Astro', 'Node.js', 'Express.js', 'FastAPI', 'Tailwind', 'PyTorch', 'TensorFlow', 'JWT', 'Bcrypt', 'Flask'],
+  },
+  {
+    group: 'Tools & platforms',
+    skills: ['Git', 'GitHub', 'VS Code', 'Cursor', 'Linux', 'Docker', 'LXC', 'Vite', 'QEMU', 'Proxmox', 'pnpm', 'Shell scripting', 'UNIX'],
+  },
+  {
+    group: 'DevOps & databases',
+    skills: ['AWS', 'Azure', 'Kubernetes', 'Vercel', 'Render', 'Cloudflare', 'Nginx', 'CI/CD', 'MongoDB', 'PostgreSQL', 'Redis', 'SQLite'],
+  },
 ]
 
 // --------------------------------------------------------------
@@ -131,34 +148,36 @@ export const SKILLS: SkillGroup[] = [
 // --------------------------------------------------------------
 export const EXPERIENCE: Job[] = [
   {
-    role: 'Software Developer Intern',
-    organization: 'Company Name',
-    link: 'https://example.com',
-    location: 'Toronto, ON (hybrid)',
-    dates: 'May 2026 to Aug 2026',
+    role: 'Co-Founder & Technical Lead',
+    organization: 'CS Digital',
+    location: 'Hamilton, Ontario',
+    dates: 'Jul 2026 to Present',
     points: [
-      'Built a React dashboard that cut weekly reporting time from 3 hours to 20 minutes',
-      'Wrote API tests that caught 12 bugs before release',
+      'Co-founded CS Digital and build custom, performance-first websites for local service businesses',
+      'Handle on-page and local SEO, including Google Business Profile and Local Service Ads',
     ],
-    tech: ['React', 'TypeScript', 'Node.js'],
   },
   {
-    role: 'Workshop Lead',
-    organization: 'Your School Computing Club',
-    location: 'Waterloo, ON',
+    role: 'Vice President of Engineering',
+    organization: 'Laurier Computing Society (LCS)',
+    location: 'Waterloo, Ontario',
     dates: 'Sep 2025 to Present',
     points: [
-      'Planned and taught 8 beginner web development workshops for 40+ students each',
-      'Grew club membership by 35% in one term',
+      'Lead engineering on LOCAH.ai',
+      'Run weekly stand-ups and code reviews with 10+ engineers',
+      'Keep the main repo moving through PR triage and review standards',
     ],
+    tech: ['FastAPI', 'Next.js', 'pgvector'],
   },
   {
-    role: 'Data Analyst Intern',
-    organization: 'Another Organization',
-    location: 'Remote',
-    dates: 'May 2025 to Aug 2025',
-    points: ['Cleaned and analysed survey data from 2,000 customers and presented findings to the leadership team'],
-    tech: ['SQL', 'Excel'],
+    role: 'Mobile Parts and Inventory Coordinator',
+    organization: 'Super Sucker Hydro Vac Service Inc.',
+    location: 'Hamilton, Ontario',
+    dates: 'Apr 2025 to Aug 2025 · May 2026 to Aug 2026',
+    points: [
+      'Managed $500K+ in parts inventory across 7 yard locations',
+      'Ran regular audits and kept records current for 10+ supervisors and field technicians',
+    ],
   },
 ]
 
@@ -173,36 +192,69 @@ export const EXPERIENCE: Job[] = [
 // --------------------------------------------------------------
 export const PROJECTS: Project[] = [
   {
-    title: 'Study Buddy',
+    title: 'Solvd',
     year: '2026',
     description:
-      'A study planner that turns a course outline into a week-by-week schedule. Used by 300+ students during exam season.',
-    image: 'project.png',
-    tags: ['React', 'TypeScript', 'Supabase'],
-    live: 'https://example.com',
-    source: 'https://github.com/your-username/study-buddy',
+      'A speedcubing timer with persistent storage, so my times stay saved without exporting and importing them. Solves are stored in the browser with IndexedDB, and a self-hosted version that syncs across devices is planned.',
+    image: 'https://opengraph.githubassets.com/1/Flapjacck/Solvd',
+    tags: ['React', 'TypeScript', 'Vite', 'Tailwind', 'cubing.js', 'Dexie'],
+    live: 'https://solvd.spencerkelly.ca',
+    source: 'https://github.com/Flapjacck/Solvd',
     featured: true,
   },
   {
-    title: 'Campus Eats Map',
-    year: '2025',
-    description: 'An interactive map of cheap food near campus, with filters for price, hours and dietary needs.',
-    tags: ['JavaScript', 'Leaflet', 'Open data'],
-    live: 'https://example.com',
-    source: 'https://github.com/your-username/campus-eats',
+    title: 'Pier',
+    year: '2026',
+    description:
+      'A lightweight control plane for k3s: a self-hosted dashboard for deploying, monitoring, and managing containerised apps on my own Kubernetes cluster, built to get the "push an app, get a URL" experience on hardware I own.',
+    image: 'https://opengraph.githubassets.com/1/Flapjacck/pier',
+    tags: ['TypeScript', 'Node.js', 'Fastify', 'React', 'Vite', 'Tailwind', 'k3s'],
+    source: 'https://github.com/Flapjacck/pier',
+    featured: true,
   },
   {
-    title: 'Budget Bot',
-    year: '2025',
-    description: 'A chat bot that sorts your bank transactions into categories and sends a weekly spending summary.',
-    tags: ['Node.js', 'SQL'],
-    source: 'https://github.com/your-username/budget-bot',
+    title: 'LOCAH.ai',
+    year: '2026',
+    description:
+      "SU-sponsored retrieval assistant over Laurier's public information, giving cited answers to student questions. Built with the Laurier Computing Society.",
+    image: 'https://opengraph.githubassets.com/1/LaurierCS/locah-ai',
+    tags: ['FastAPI', 'Next.js', 'PostgreSQL', 'pgvector', 'RAG'],
+    source: 'https://github.com/LaurierCS/locah-ai',
   },
   {
-    title: 'Research Poster: Transit Delays',
-    year: '2024',
-    description: 'Analysed a year of city bus data to find which routes are late most often, and why.',
-    tags: ['Data analysis', 'Research'],
+    title: 'Swing',
+    year: '2026',
+    description:
+      'A client-side Fabric mod for Minecraft 26.2 that tweaks your first-person viewmodel: item scale, swing speed, positional offsets, and tilt. Nothing server-side changes.',
+    image: 'https://opengraph.githubassets.com/1/Flapjacck/swing',
+    tags: ['Java', 'Fabric', 'Minecraft'],
+    live: 'https://modrinth.com/mod/swing',
+    source: 'https://github.com/Flapjacck/swing',
+  },
+  {
+    title: 'BirdWatch',
+    year: '2025',
+    description: 'A web application built with React for exploring and discovering bird courses.',
+    image: 'https://opengraph.githubassets.com/1/Flapjacck/BirdWatch',
+    tags: ['React', 'Python', 'Node.js', 'Reddit API'],
+    live: 'https://birdwatch.spencerkelly.ca',
+    source: 'https://github.com/Flapjacck/BirdWatch',
+  },
+  {
+    title: 'MoxBox',
+    year: '2025',
+    description: 'A lightweight self-hosted file storage platform.',
+    image: 'https://opengraph.githubassets.com/1/Flapjacck/moxbox',
+    tags: ['React', 'TypeScript', 'Vite', 'Node.js', 'Express', 'Proxmox'],
+    source: 'https://github.com/Flapjacck/moxbox',
+  },
+  {
+    title: 'SKOS',
+    year: '2025',
+    description: 'A bare-bones operating system kernel built from scratch in C and Assembly for x86 architecture.',
+    image: 'https://opengraph.githubassets.com/1/Flapjacck/skos',
+    tags: ['C', 'Assembly', 'x86', 'NASM', 'GCC', 'QEMU'],
+    source: 'https://github.com/Flapjacck/skos',
   },
 ]
 
@@ -212,44 +264,20 @@ export const PROJECTS: Project[] = [
 // --------------------------------------------------------------
 
 // Certifications and awards. "link" is optional.
-export const CERTIFICATIONS: Certification[] = [
-  { name: 'AWS Certified Cloud Practitioner', issuer: 'Amazon Web Services', year: '2026', link: 'https://example.com' },
-  { name: 'Hackathon Winner, Best Use of Data', issuer: 'Your City Hacks', year: '2025' },
-]
+export const CERTIFICATIONS: Certification[] = []
 
 // Quotes from professors, managers, or teammates.
 // Always ask permission before quoting someone.
-export const TESTIMONIALS: Testimonial[] = [
-  {
-    quote: 'Your Name picked up our codebase in a week and shipped features our users still talk about.',
-    name: 'Manager Name',
-    role: 'Engineering Manager, Company Name',
-  },
-  {
-    quote: 'One of the clearest communicators in my class. Their final project was a highlight of the term.',
-    name: 'Professor Name',
-    role: 'Professor, Your University',
-  },
-]
+export const TESTIMONIALS: Testimonial[] = []
 
 // Articles, talks, research posters, podcasts, or videos. "link" is optional.
-export const WRITING: Writing[] = [
-  {
-    title: 'What I learned shipping my first app to real users',
-    type: 'Article',
-    venue: 'Personal blog',
-    date: 'Mar 2026',
-    link: 'https://example.com',
-  },
-  { title: 'Intro to React for absolute beginners', type: 'Talk', venue: 'Computing Club workshop', date: 'Oct 2025' },
-]
+export const WRITING: Writing[] = []
 
 // --------------------------------------------------------------
 // 9. CONTACT
 // The last section. The big button emails SITE.email.
 // --------------------------------------------------------------
 export const CONTACT: Contact = {
-  heading: "Let's work together",
-  message:
-    "I'm looking for internships and new-grad roles in software development. The best way to reach me is by email, and I usually reply within a day.",
+  heading: "Let's connect",
+  message: 'The best way to reach me is on LinkedIn, and you can find everything I build on GitHub.',
 }
